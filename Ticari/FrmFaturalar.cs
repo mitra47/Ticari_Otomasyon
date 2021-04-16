@@ -63,7 +63,7 @@ namespace Ticari
                 Temizle();
             }
 
-            if ( TxtFaturaId.Text ! == "")
+           else 
             {
                 double miktar, tutar, fiyat;
                 fiyat = Convert.ToDouble(TxtFiyat.Text);
@@ -105,14 +105,73 @@ namespace Ticari
 
         }
 
+      
+        
+
+        private void BtnSil_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult Secim = new DialogResult();
+
+                Secim = MessageBox.Show(TxtSıraNo.Text + " " + TxtAlici.Text + " " + "Faturayı" + "  " + "silmeyi Onaylıyor musunuz_?", "BİLGİ", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (Secim == DialogResult.Yes)
+                {
+                    SqlCommand komutsil = new SqlCommand("Delete From  TBL_FATURABILGI where FATURABILGIID=@p1", bgl.baglanti());
+                    komutsil.Parameters.AddWithValue("@p1", TxtId.Text);
+                    komutsil.ExecuteNonQuery();
+                    MessageBox.Show(" " + "Sistemden Silindi...", TxtSıraNo.Text + " " + TxtAlici.Text + " " + " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (Secim == DialogResult.No)
+                {
+                    MessageBox.Show(" " + "Silme işlemi İptal edilmiştir....", TxtSıraNo.Text + " " + TxtAlici.Text + " " + " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                bgl.baglanti().Close();
+
+                Faturalistele();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         private void BtnTemizle_Click(object sender, EventArgs e)
         {
             Temizle();
         }
 
-        private void BtnSil_Click(object sender, EventArgs e)
+        private void BtnGuncelle_Click(object sender, EventArgs e)
         {
+            SqlCommand komut = new SqlCommand("update  TBL_FATURABILGI set SERI=@P1,SIRANO=@P2,TARIH=@P3,SAAT=@P4,VERGIDAIRE=@P5,ALICI=@P6,TESLIMEDEN=@P7,TESLIMALAN=@P8   where FATURABILGIID=@P9", bgl.baglanti());
+            komut.Parameters.AddWithValue("@P1", TxtSeriNo.Text);
+            komut.Parameters.AddWithValue("@P2", TxtSıraNo.Text);
+            komut.Parameters.AddWithValue("@P3", MskTarih.Text);
+            komut.Parameters.AddWithValue("@P4", Msksaat.Text);
+            komut.Parameters.AddWithValue("@P5", TxtVergi.Text);
+            komut.Parameters.AddWithValue("@P6", TxtAlici.Text);
+            komut.Parameters.AddWithValue("@P7", TxtTeden.Text);
+            komut.Parameters.AddWithValue("@P8", TxtTalan.Text);
+            komut.Parameters.AddWithValue("@P9", TxtId.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
 
+            MessageBox.Show("Fatura Bilgisi Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Faturalistele();
+            Temizle();
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            FrmFaturaBilgiDetay fr = new FrmFaturaBilgiDetay();
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            if (dr != null)
+            {
+                fr.id = dr["FATURABILGIID"].ToString();
+            }
+            fr.Show();
         }
     }
 }

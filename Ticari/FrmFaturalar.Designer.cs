@@ -35,6 +35,9 @@ namespace Ticari
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.TxtTalan = new DevExpress.XtraEditors.TextEdit();
             this.TxtTeden = new DevExpress.XtraEditors.TextEdit();
             this.TxtAlici = new DevExpress.XtraEditors.TextEdit();
@@ -64,11 +67,8 @@ namespace Ticari
             this.TxtUrunAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.TxtFId = new DevExpress.XtraEditors.TextEdit();
             this.TxtAt = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -121,6 +121,7 @@ namespace Ticari
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // xtraTabControl1
             // 
@@ -145,22 +146,64 @@ namespace Ticari
             // 
             // groupControl4
             // 
+            this.groupControl4.Controls.Add(this.BtnTemizle);
+            this.groupControl4.Controls.Add(this.BtnSil);
+            this.groupControl4.Controls.Add(this.BtnGuncelle);
             this.groupControl4.Controls.Add(this.TxtTalan);
             this.groupControl4.Controls.Add(this.TxtTeden);
             this.groupControl4.Controls.Add(this.TxtAlici);
             this.groupControl4.Controls.Add(this.labelControl9);
             this.groupControl4.Controls.Add(this.TxtY);
             this.groupControl4.Controls.Add(this.labelControl2);
-            this.groupControl4.Location = new System.Drawing.Point(0, 295);
+            this.groupControl4.Location = new System.Drawing.Point(0, 245);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.ShowCaption = false;
-            this.groupControl4.Size = new System.Drawing.Size(268, 238);
+            this.groupControl4.Size = new System.Drawing.Size(277, 268);
             this.groupControl4.TabIndex = 2;
             this.groupControl4.Text = "groupControl4";
             // 
+            // BtnTemizle
+            // 
+            this.BtnTemizle.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnTemizle.Appearance.Options.UseFont = true;
+            this.BtnTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnTemizle.ImageOptions.Image")));
+            this.BtnTemizle.Location = new System.Drawing.Point(114, 167);
+            this.BtnTemizle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BtnTemizle.Name = "BtnTemizle";
+            this.BtnTemizle.Size = new System.Drawing.Size(134, 37);
+            this.BtnTemizle.TabIndex = 39;
+            this.BtnTemizle.Text = "TEMİZLE";
+            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
+            // 
+            // BtnSil
+            // 
+            this.BtnSil.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnSil.Appearance.Options.UseFont = true;
+            this.BtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSil.ImageOptions.Image")));
+            this.BtnSil.Location = new System.Drawing.Point(114, 91);
+            this.BtnSil.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BtnSil.Name = "BtnSil";
+            this.BtnSil.Size = new System.Drawing.Size(134, 37);
+            this.BtnSil.TabIndex = 38;
+            this.BtnSil.Text = "SİL";
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click_1);
+            // 
+            // BtnGuncelle
+            // 
+            this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnGuncelle.Appearance.Options.UseFont = true;
+            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
+            this.BtnGuncelle.Location = new System.Drawing.Point(114, 129);
+            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(134, 37);
+            this.BtnGuncelle.TabIndex = 37;
+            this.BtnGuncelle.Text = "GÜNCELLE";
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
+            // 
             // TxtTalan
             // 
-            this.TxtTalan.Location = new System.Drawing.Point(115, 71);
+            this.TxtTalan.Location = new System.Drawing.Point(115, 58);
             this.TxtTalan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtTalan.Name = "TxtTalan";
             this.TxtTalan.Size = new System.Drawing.Size(134, 20);
@@ -168,7 +211,7 @@ namespace Ticari
             // 
             // TxtTeden
             // 
-            this.TxtTeden.Location = new System.Drawing.Point(115, 45);
+            this.TxtTeden.Location = new System.Drawing.Point(115, 32);
             this.TxtTeden.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtTeden.Name = "TxtTeden";
             this.TxtTeden.Size = new System.Drawing.Size(134, 20);
@@ -176,7 +219,7 @@ namespace Ticari
             // 
             // TxtAlici
             // 
-            this.TxtAlici.Location = new System.Drawing.Point(114, 19);
+            this.TxtAlici.Location = new System.Drawing.Point(114, 6);
             this.TxtAlici.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtAlici.Name = "TxtAlici";
             this.TxtAlici.Size = new System.Drawing.Size(134, 20);
@@ -186,7 +229,7 @@ namespace Ticari
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(2, 71);
+            this.labelControl9.Location = new System.Drawing.Point(2, 58);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(105, 19);
@@ -197,7 +240,7 @@ namespace Ticari
             // 
             this.TxtY.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtY.Appearance.Options.UseFont = true;
-            this.TxtY.Location = new System.Drawing.Point(65, 22);
+            this.TxtY.Location = new System.Drawing.Point(65, 9);
             this.TxtY.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtY.Name = "TxtY";
             this.TxtY.Size = new System.Drawing.Size(44, 19);
@@ -208,7 +251,7 @@ namespace Ticari
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(6, 46);
+            this.labelControl2.Location = new System.Drawing.Point(6, 33);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(103, 19);
@@ -223,10 +266,10 @@ namespace Ticari
             this.groupControl3.Controls.Add(this.TxtVergi);
             this.groupControl3.Controls.Add(this.labelControl6);
             this.groupControl3.Controls.Add(this.labelControl8);
-            this.groupControl3.Location = new System.Drawing.Point(0, 143);
+            this.groupControl3.Location = new System.Drawing.Point(0, 123);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.ShowCaption = false;
-            this.groupControl3.Size = new System.Drawing.Size(270, 146);
+            this.groupControl3.Size = new System.Drawing.Size(277, 116);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "groupControl3";
             // 
@@ -302,13 +345,13 @@ namespace Ticari
             this.groupControl2.Location = new System.Drawing.Point(0, 16);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.ShowCaption = false;
-            this.groupControl2.Size = new System.Drawing.Size(268, 121);
+            this.groupControl2.Size = new System.Drawing.Size(277, 102);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "groupControl2";
             // 
             // TxtId
             // 
-            this.TxtId.Location = new System.Drawing.Point(114, 20);
+            this.TxtId.Location = new System.Drawing.Point(114, 7);
             this.TxtId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtId.Name = "TxtId";
             this.TxtId.Size = new System.Drawing.Size(134, 20);
@@ -318,7 +361,7 @@ namespace Ticari
             // 
             this.Txti.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Txti.Appearance.Options.UseFont = true;
-            this.Txti.Location = new System.Drawing.Point(88, 23);
+            this.Txti.Location = new System.Drawing.Point(88, 10);
             this.Txti.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Txti.Name = "Txti";
             this.Txti.Size = new System.Drawing.Size(19, 19);
@@ -327,7 +370,7 @@ namespace Ticari
             // 
             // TxtSeriNo
             // 
-            this.TxtSeriNo.Location = new System.Drawing.Point(114, 49);
+            this.TxtSeriNo.Location = new System.Drawing.Point(114, 36);
             this.TxtSeriNo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtSeriNo.Name = "TxtSeriNo";
             this.TxtSeriNo.Size = new System.Drawing.Size(134, 20);
@@ -337,7 +380,7 @@ namespace Ticari
             // 
             this.Txtb.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Txtb.Appearance.Options.UseFont = true;
-            this.Txtb.Location = new System.Drawing.Point(43, 52);
+            this.Txtb.Location = new System.Drawing.Point(43, 39);
             this.Txtb.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Txtb.Name = "Txtb";
             this.Txtb.Size = new System.Drawing.Size(64, 19);
@@ -346,7 +389,7 @@ namespace Ticari
             // 
             // TxtSıraNo
             // 
-            this.TxtSıraNo.Location = new System.Drawing.Point(114, 75);
+            this.TxtSıraNo.Location = new System.Drawing.Point(114, 62);
             this.TxtSıraNo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtSıraNo.Name = "TxtSıraNo";
             this.TxtSıraNo.Size = new System.Drawing.Size(134, 20);
@@ -356,7 +399,7 @@ namespace Ticari
             // 
             this.TxtS.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtS.Appearance.Options.UseFont = true;
-            this.TxtS.Location = new System.Drawing.Point(41, 74);
+            this.TxtS.Location = new System.Drawing.Point(41, 61);
             this.TxtS.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtS.Name = "TxtS";
             this.TxtS.Size = new System.Drawing.Size(66, 19);
@@ -380,11 +423,8 @@ namespace Ticari
             this.groupControl5.Controls.Add(this.TxtUrunAdi);
             this.groupControl5.Controls.Add(this.labelControl10);
             this.groupControl5.Controls.Add(this.labelControl7);
-            this.groupControl5.Controls.Add(this.BtnTemizle);
-            this.groupControl5.Controls.Add(this.BtnSil);
             this.groupControl5.Controls.Add(this.BtnKaydet);
             this.groupControl5.Controls.Add(this.labelControl1);
-            this.groupControl5.Controls.Add(this.BtnGuncelle);
             this.groupControl5.Controls.Add(this.TxtFId);
             this.groupControl5.Controls.Add(this.TxtAt);
             this.groupControl5.Controls.Add(this.labelControl3);
@@ -458,32 +498,6 @@ namespace Ticari
             this.labelControl7.TabIndex = 36;
             this.labelControl7.Text = "TUTAR:";
             // 
-            // BtnTemizle
-            // 
-            this.BtnTemizle.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnTemizle.Appearance.Options.UseFont = true;
-            this.BtnTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnTemizle.ImageOptions.Image")));
-            this.BtnTemizle.Location = new System.Drawing.Point(106, 314);
-            this.BtnTemizle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.BtnTemizle.Name = "BtnTemizle";
-            this.BtnTemizle.Size = new System.Drawing.Size(134, 37);
-            this.BtnTemizle.TabIndex = 35;
-            this.BtnTemizle.Text = "TEMİZLE";
-            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
-            // 
-            // BtnSil
-            // 
-            this.BtnSil.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnSil.Appearance.Options.UseFont = true;
-            this.BtnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSil.ImageOptions.Image")));
-            this.BtnSil.Location = new System.Drawing.Point(106, 238);
-            this.BtnSil.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(134, 37);
-            this.BtnSil.TabIndex = 23;
-            this.BtnSil.Text = "SİL";
-            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
-            // 
             // BtnKaydet
             // 
             this.BtnKaydet.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -507,18 +521,6 @@ namespace Ticari
             this.labelControl1.Size = new System.Drawing.Size(48, 19);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "FİYAT:";
-            // 
-            // BtnGuncelle
-            // 
-            this.BtnGuncelle.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnGuncelle.Appearance.Options.UseFont = true;
-            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(106, 276);
-            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(134, 37);
-            this.BtnGuncelle.TabIndex = 22;
-            this.BtnGuncelle.Text = "GÜNCELLE";
             // 
             // TxtFId
             // 
@@ -635,11 +637,8 @@ namespace Ticari
         private DevExpress.XtraEditors.LabelControl TxtS;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraEditors.GroupControl groupControl5;
-        private DevExpress.XtraEditors.SimpleButton BtnTemizle;
-        private DevExpress.XtraEditors.SimpleButton BtnSil;
         private DevExpress.XtraEditors.SimpleButton BtnKaydet;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
         private DevExpress.XtraEditors.TextEdit TxtFId;
         private DevExpress.XtraEditors.LabelControl TxtAt;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -651,5 +650,8 @@ namespace Ticari
         private DevExpress.XtraEditors.TextEdit TxtUrunAdi;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.SimpleButton BtnTemizle;
+        private DevExpress.XtraEditors.SimpleButton BtnSil;
+        private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
     }
 }
