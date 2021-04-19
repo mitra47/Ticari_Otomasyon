@@ -97,5 +97,26 @@ namespace Ticari
                 FrmF.Show();
             }
         }
+        FrmNotlar Frmm;
+        private void BtnNotlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Frmm == null)
+            {
+                Frmm = new FrmNotlar();
+                Frmm.MdiParent = this;
+                Frmm.Show();
+            }
+        }
+        FrmHareketler Frmh;
+        private void BtnHareket_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Frmh == null)
+            {
+                Frmh = new FrmHareketler();
+                Frmh.MdiParent = this;
+                Frmh.Show();
+            }
+
+        }
     }
 }

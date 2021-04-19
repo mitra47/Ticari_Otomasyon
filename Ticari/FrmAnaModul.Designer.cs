@@ -31,7 +31,7 @@ namespace Ticari
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaModul));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.BtnUrunler = new DevExpress.XtraBars.BarButtonItem();
             this.BtnStoklar = new DevExpress.XtraBars.BarButtonItem();
@@ -48,6 +48,8 @@ namespace Ticari
             this.BtnRehber = new DevExpress.XtraBars.BarButtonItem();
             this.BtnFaturalar = new DevExpress.XtraBars.BarButtonItem();
             this.BtnAyarlar = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnHareket = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnRaporlar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
@@ -75,9 +77,11 @@ namespace Ticari
             this.BtnBankalar,
             this.BtnRehber,
             this.BtnFaturalar,
-            this.BtnAyarlar});
+            this.BtnAyarlar,
+            this.BtnHareket,
+            this.BtnRaporlar});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 15;
+            this.ribbonControl1.MaxItemId = 17;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -132,9 +136,9 @@ namespace Ticari
             // 
             // 
             // 
-            galleryItemGroup3.Caption = "Group1";
+            galleryItemGroup1.Caption = "Group1";
             this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3});
+            galleryItemGroup1});
             this.ribbonGalleryBarItem1.Id = 5;
             this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
             // 
@@ -197,6 +201,7 @@ namespace Ticari
             this.BtnNotlar.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnNotlar.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnNotlar.Name = "BtnNotlar";
+            this.BtnNotlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnNotlar_ItemClick);
             // 
             // BtnBankalar
             // 
@@ -241,6 +246,27 @@ namespace Ticari
             this.BtnAyarlar.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnAyarlar.Name = "BtnAyarlar";
             // 
+            // BtnHareket
+            // 
+            this.BtnHareket.Caption = "HAREKETLER";
+            this.BtnHareket.Id = 15;
+            this.BtnHareket.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnHareket.ImageOptions.Image")));
+            this.BtnHareket.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnHareket.ImageOptions.LargeImage")));
+            this.BtnHareket.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnHareket.ItemAppearance.Normal.Options.UseFont = true;
+            this.BtnHareket.Name = "BtnHareket";
+            this.BtnHareket.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnHareket_ItemClick);
+            // 
+            // BtnRaporlar
+            // 
+            this.BtnRaporlar.Caption = "RAPORLAR";
+            this.BtnRaporlar.Id = 16;
+            this.BtnRaporlar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnRaporlar.ImageOptions.Image")));
+            this.BtnRaporlar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnRaporlar.ImageOptions.LargeImage")));
+            this.BtnRaporlar.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnRaporlar.ItemAppearance.Normal.Options.UseFont = true;
+            this.BtnRaporlar.Name = "BtnRaporlar";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -258,10 +284,12 @@ namespace Ticari
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnPersoneller);
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnGiderler);
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnKasa);
-            this.ribbonPageGroup1.ItemLinks.Add(this.BtnNotlar);
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnBankalar);
-            this.ribbonPageGroup1.ItemLinks.Add(this.BtnRehber);
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnFaturalar);
+            this.ribbonPageGroup1.ItemLinks.Add(this.BtnHareket);
+            this.ribbonPageGroup1.ItemLinks.Add(this.BtnRaporlar);
+            this.ribbonPageGroup1.ItemLinks.Add(this.BtnRehber);
+            this.ribbonPageGroup1.ItemLinks.Add(this.BtnNotlar);
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnAyarlar);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
@@ -309,6 +337,8 @@ namespace Ticari
         private DevExpress.XtraBars.BarButtonItem BtnAyarlar;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarButtonItem BtnHareket;
+        private DevExpress.XtraBars.BarButtonItem BtnRaporlar;
     }
 }
 
