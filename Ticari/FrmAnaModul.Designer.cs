@@ -107,6 +107,7 @@ namespace Ticari
             this.BtnStoklar.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnStoklar.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnStoklar.Name = "BtnStoklar";
+            this.BtnStoklar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStoklar_ItemClick);
             // 
             // BtnMusteriler
             // 
@@ -245,6 +246,7 @@ namespace Ticari
             this.BtnAyarlar.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnAyarlar.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnAyarlar.Name = "BtnAyarlar";
+            this.BtnAyarlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAyarlar_ItemClick);
             // 
             // BtnHareket
             // 
@@ -266,6 +268,7 @@ namespace Ticari
             this.BtnRaporlar.ItemAppearance.Normal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnRaporlar.ItemAppearance.Normal.Options.UseFont = true;
             this.BtnRaporlar.Name = "BtnRaporlar";
+            this.BtnRaporlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnRaporlar_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -308,6 +311,7 @@ namespace Ticari
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stok Takip";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmAnaModul_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();

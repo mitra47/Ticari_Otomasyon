@@ -22,5 +22,16 @@ namespace Ticari.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\sqlexpress;Initial Catalog=DboTicariOtomosyon;Integrated Se" +
+            "curity=True")]
+        public string DboTicariOtomosyonConnectionString {
+            get {
+                return ((string)(this["DboTicariOtomosyonConnectionString"]));
+            }
+        }
     }
 }

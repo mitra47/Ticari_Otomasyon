@@ -118,5 +118,40 @@ namespace Ticari
             }
 
         }
+        FrmRaporlar Frmr;
+        private void BtnRaporlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Frmr == null)
+            {
+                Frmr = new FrmRaporlar();
+                Frmr.MdiParent = this;
+                Frmr.Show();
+            }
+        }
+        FrmStoklar Frms;
+        private void BtnStoklar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Frms == null)
+            {
+                Frms = new FrmStoklar();
+                Frms.MdiParent = this;
+                Frms.Show();
+            }
+        }
+
+        private void FrmAnaModul_Load(object sender, EventArgs e)
+        {
+
+        }
+        FrmAyarla Frmay;
+        private void BtnAyarlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Frmay == null)
+            {
+                Frmay = new FrmAyarla();
+                
+                Frmay.Show();
+            }
+        }
     }
 }
