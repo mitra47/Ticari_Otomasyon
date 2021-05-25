@@ -231,5 +231,21 @@ namespace Ticari
         {
             Temizle();
         }
+        decimal fiyat = 0, miktar = 0, tutar = 0;
+        private void TxtMiktar_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                fiyat = decimal.Parse(TxtFiyat.Text);
+                miktar = decimal.Parse(TxtMiktar.Text);
+                tutar = miktar * fiyat;
+                TxtTutar.Text = tutar.ToString();
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
     }
 }

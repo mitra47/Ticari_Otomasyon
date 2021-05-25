@@ -47,12 +47,14 @@ namespace Ticari
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-           
+            BtnYazdır.BackColor = Color.Gray;
+            BtnYazdır.ForeColor = Color.Gray;
+
         }
-        
 
-        
 
-       
+
+
+
     }
 }

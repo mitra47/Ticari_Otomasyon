@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Drawing.Printing;
 namespace Ticari
 {
     public partial class FrmFaturaBilgiDetay : Form
@@ -150,5 +150,8 @@ namespace Ticari
             }
             fr.Show();
         }
+
+        
+
     }
 }

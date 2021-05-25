@@ -32,7 +32,7 @@ namespace Ticari
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFaturaBilgiDetay));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnYazdir = new DevExpress.XtraEditors.GroupControl();
             this.TxtPlaka = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.MskTarih = new System.Windows.Forms.MaskedTextBox();
@@ -60,8 +60,8 @@ namespace Ticari
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
-            this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnYazdir)).BeginInit();
+            this.BtnYazdir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPlaka.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSofur.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSevk.Properties)).BeginInit();
@@ -94,39 +94,39 @@ namespace Ticari
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick_1);
             // 
-            // groupControl5
+            // BtnYazdir
             // 
-            this.groupControl5.Controls.Add(this.TxtPlaka);
-            this.groupControl5.Controls.Add(this.labelControl9);
-            this.groupControl5.Controls.Add(this.MskTarih);
-            this.groupControl5.Controls.Add(this.labelControl5);
-            this.groupControl5.Controls.Add(this.Msksaat);
-            this.groupControl5.Controls.Add(this.labelControl2);
-            this.groupControl5.Controls.Add(this.labelControl8);
-            this.groupControl5.Controls.Add(this.labelControl6);
-            this.groupControl5.Controls.Add(this.TxtSofur);
-            this.groupControl5.Controls.Add(this.TxtSevk);
-            this.groupControl5.Controls.Add(this.BtnKaydet);
-            this.groupControl5.Controls.Add(this.BtnSil);
-            this.groupControl5.Controls.Add(this.BtnGuncelle);
-            this.groupControl5.Controls.Add(this.TxtFaturaId);
-            this.groupControl5.Controls.Add(this.TxtGonderen);
-            this.groupControl5.Controls.Add(this.TxtAlici);
-            this.groupControl5.Controls.Add(this.TxtMiktar);
-            this.groupControl5.Controls.Add(this.TxtMalzeme);
-            this.groupControl5.Controls.Add(this.labelControl10);
-            this.groupControl5.Controls.Add(this.labelControl7);
-            this.groupControl5.Controls.Add(this.labelControl1);
-            this.groupControl5.Controls.Add(this.TxtUrunId);
-            this.groupControl5.Controls.Add(this.TxtAt);
-            this.groupControl5.Controls.Add(this.labelControl3);
-            this.groupControl5.Controls.Add(this.labelControl4);
-            this.groupControl5.Location = new System.Drawing.Point(939, 0);
-            this.groupControl5.Name = "groupControl5";
-            this.groupControl5.ShowCaption = false;
-            this.groupControl5.Size = new System.Drawing.Size(340, 560);
-            this.groupControl5.TabIndex = 2;
-            this.groupControl5.Text = "groupControl5";
+            this.BtnYazdir.Controls.Add(this.TxtPlaka);
+            this.BtnYazdir.Controls.Add(this.labelControl9);
+            this.BtnYazdir.Controls.Add(this.MskTarih);
+            this.BtnYazdir.Controls.Add(this.labelControl5);
+            this.BtnYazdir.Controls.Add(this.Msksaat);
+            this.BtnYazdir.Controls.Add(this.labelControl2);
+            this.BtnYazdir.Controls.Add(this.labelControl8);
+            this.BtnYazdir.Controls.Add(this.labelControl6);
+            this.BtnYazdir.Controls.Add(this.TxtSofur);
+            this.BtnYazdir.Controls.Add(this.TxtSevk);
+            this.BtnYazdir.Controls.Add(this.BtnKaydet);
+            this.BtnYazdir.Controls.Add(this.BtnSil);
+            this.BtnYazdir.Controls.Add(this.BtnGuncelle);
+            this.BtnYazdir.Controls.Add(this.TxtFaturaId);
+            this.BtnYazdir.Controls.Add(this.TxtGonderen);
+            this.BtnYazdir.Controls.Add(this.TxtAlici);
+            this.BtnYazdir.Controls.Add(this.TxtMiktar);
+            this.BtnYazdir.Controls.Add(this.TxtMalzeme);
+            this.BtnYazdir.Controls.Add(this.labelControl10);
+            this.BtnYazdir.Controls.Add(this.labelControl7);
+            this.BtnYazdir.Controls.Add(this.labelControl1);
+            this.BtnYazdir.Controls.Add(this.TxtUrunId);
+            this.BtnYazdir.Controls.Add(this.TxtAt);
+            this.BtnYazdir.Controls.Add(this.labelControl3);
+            this.BtnYazdir.Controls.Add(this.labelControl4);
+            this.BtnYazdir.Location = new System.Drawing.Point(939, 0);
+            this.BtnYazdir.Name = "BtnYazdir";
+            this.BtnYazdir.ShowCaption = false;
+            this.BtnYazdir.Size = new System.Drawing.Size(340, 560);
+            this.BtnYazdir.TabIndex = 2;
+            this.BtnYazdir.Text = "groupControl5";
             // 
             // TxtPlaka
             // 
@@ -385,7 +385,7 @@ namespace Ticari
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 564);
-            this.Controls.Add(this.groupControl5);
+            this.Controls.Add(this.BtnYazdir);
             this.Controls.Add(this.gridControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -395,9 +395,9 @@ namespace Ticari
             this.Load += new System.EventHandler(this.FrmFaturaBilgiDetay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
-            this.groupControl5.ResumeLayout(false);
-            this.groupControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnYazdir)).EndInit();
+            this.BtnYazdir.ResumeLayout(false);
+            this.BtnYazdir.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPlaka.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSofur.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSevk.Properties)).EndInit();
@@ -415,7 +415,7 @@ namespace Ticari
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraEditors.GroupControl BtnYazdir;
         private DevExpress.XtraEditors.SimpleButton BtnSil;
         private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
         private DevExpress.XtraEditors.TextEdit TxtFaturaId;

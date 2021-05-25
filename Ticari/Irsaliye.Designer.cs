@@ -32,7 +32,7 @@ namespace Ticari
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Irsaliye));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnYazdır = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.tBLFATURADETAYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dboTicariOtomosyonDataSet9BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -68,7 +68,7 @@ namespace Ticari
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.simpleButton1);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnYazdır);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.gridControl1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.dataGridView1);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(799, 461);
@@ -82,22 +82,27 @@ namespace Ticari
             this.toolStripContainer1.Text = "toolStripContainer1";
             this.toolStripContainer1.TopToolStripPanelVisible = false;
             // 
-            // simpleButton1
+            // BtnYazdır
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(0, 0);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(38, 33);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.BtnYazdır.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnYazdır.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BtnYazdır.Appearance.Options.UseFont = true;
+            this.BtnYazdır.Appearance.Options.UseForeColor = true;
+            this.BtnYazdır.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnYazdır.ImageOptions.Image")));
+            this.BtnYazdır.Location = new System.Drawing.Point(671, 420);
+            this.BtnYazdır.Name = "BtnYazdır";
+            this.BtnYazdır.Size = new System.Drawing.Size(128, 41);
+            this.BtnYazdır.TabIndex = 2;
+            this.BtnYazdır.Text = "YAZDIR";
+            this.BtnYazdır.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.tBLFATURADETAYBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.Location = new System.Drawing.Point(3, 3);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(799, 461);
+            this.gridControl1.Size = new System.Drawing.Size(799, 423);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -273,6 +278,6 @@ namespace Ticari
         private DevExpress.XtraGrid.Columns.GridColumn colSEVK;
         private DevExpress.XtraGrid.Columns.GridColumn colSOFUR;
         private DevExpress.XtraGrid.Columns.GridColumn colPLAKA;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton BtnYazdır;
     }
 }

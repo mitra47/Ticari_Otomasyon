@@ -59,6 +59,11 @@ namespace Ticari
             this.TxtS = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.TxtGToplam = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.TxtKdv = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSil = new DevExpress.XtraEditors.SimpleButton();
             this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
@@ -72,11 +77,6 @@ namespace Ticari
             this.TxtCinsi = new DevExpress.XtraEditors.TextEdit();
             this.TxtAt = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtGToplam = new DevExpress.XtraEditors.TextEdit();
-            this.TxtKdv = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -99,13 +99,13 @@ namespace Ticari
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtGToplam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtKdv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtToplam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTutar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFiyat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMiktar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCinsi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtGToplam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtKdv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -429,6 +429,55 @@ namespace Ticari
             this.groupControl5.TabIndex = 0;
             this.groupControl5.Text = "groupControl5";
             // 
+            // TxtGToplam
+            // 
+            this.TxtGToplam.Location = new System.Drawing.Point(124, 167);
+            this.TxtGToplam.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.TxtGToplam.Name = "TxtGToplam";
+            this.TxtGToplam.Size = new System.Drawing.Size(134, 20);
+            this.TxtGToplam.TabIndex = 50;
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl13.Appearance.Options.UseFont = true;
+            this.labelControl13.Location = new System.Drawing.Point(34, 163);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(82, 19);
+            this.labelControl13.TabIndex = 49;
+            this.labelControl13.Text = "G.TOPLAM:";
+            // 
+            // TxtKdv
+            // 
+            this.TxtKdv.Location = new System.Drawing.Point(124, 141);
+            this.TxtKdv.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.TxtKdv.Name = "TxtKdv";
+            this.TxtKdv.Size = new System.Drawing.Size(134, 20);
+            this.TxtKdv.TabIndex = 48;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Location = new System.Drawing.Point(49, 113);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(67, 19);
+            this.labelControl12.TabIndex = 47;
+            this.labelControl12.Text = "TOPLAM:";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(79, 138);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(37, 19);
+            this.labelControl4.TabIndex = 46;
+            this.labelControl4.Text = "KDV:";
+            // 
             // BtnTemizle
             // 
             this.BtnTemizle.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -499,6 +548,7 @@ namespace Ticari
             this.TxtMiktar.Name = "TxtMiktar";
             this.TxtMiktar.Size = new System.Drawing.Size(134, 20);
             this.TxtMiktar.TabIndex = 39;
+            this.TxtMiktar.EditValueChanged += new System.EventHandler(this.TxtMiktar_EditValueChanged);
             // 
             // labelControl7
             // 
@@ -565,55 +615,6 @@ namespace Ticari
             this.labelControl3.TabIndex = 26;
             this.labelControl3.Text = "CİNSİ:";
             // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(79, 138);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(37, 19);
-            this.labelControl4.TabIndex = 46;
-            this.labelControl4.Text = "KDV:";
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(49, 113);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(67, 19);
-            this.labelControl12.TabIndex = 47;
-            this.labelControl12.Text = "TOPLAM:";
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(34, 163);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(82, 19);
-            this.labelControl13.TabIndex = 49;
-            this.labelControl13.Text = "G.TOPLAM:";
-            // 
-            // TxtGToplam
-            // 
-            this.TxtGToplam.Location = new System.Drawing.Point(124, 167);
-            this.TxtGToplam.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.TxtGToplam.Name = "TxtGToplam";
-            this.TxtGToplam.Size = new System.Drawing.Size(134, 20);
-            this.TxtGToplam.TabIndex = 50;
-            // 
-            // TxtKdv
-            // 
-            this.TxtKdv.Location = new System.Drawing.Point(124, 141);
-            this.TxtKdv.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.TxtKdv.Name = "TxtKdv";
-            this.TxtKdv.Size = new System.Drawing.Size(134, 20);
-            this.TxtKdv.TabIndex = 48;
-            // 
             // FrmFaturalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -650,13 +651,13 @@ namespace Ticari
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtGToplam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtKdv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtToplam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTutar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFiyat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMiktar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCinsi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtGToplam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtKdv.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
