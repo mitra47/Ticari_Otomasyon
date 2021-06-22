@@ -71,13 +71,13 @@ namespace Ticari
             this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnYazdır);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.gridControl1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.dataGridView1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(799, 461);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(810, 468);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.LeftToolStripPanelVisible = false;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
             this.toolStripContainer1.RightToolStripPanelVisible = false;
-            this.toolStripContainer1.Size = new System.Drawing.Size(799, 461);
+            this.toolStripContainer1.Size = new System.Drawing.Size(810, 468);
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
             this.toolStripContainer1.TopToolStripPanelVisible = false;
@@ -89,9 +89,9 @@ namespace Ticari
             this.BtnYazdır.Appearance.Options.UseFont = true;
             this.BtnYazdır.Appearance.Options.UseForeColor = true;
             this.BtnYazdır.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnYazdır.ImageOptions.Image")));
-            this.BtnYazdır.Location = new System.Drawing.Point(671, 420);
+            this.BtnYazdır.Location = new System.Drawing.Point(671, 426);
             this.BtnYazdır.Name = "BtnYazdır";
-            this.BtnYazdır.Size = new System.Drawing.Size(128, 41);
+            this.BtnYazdır.Size = new System.Drawing.Size(131, 35);
             this.BtnYazdır.TabIndex = 2;
             this.BtnYazdır.Text = "YAZDIR";
             this.BtnYazdır.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -222,7 +222,7 @@ namespace Ticari
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(799, 461);
+            this.dataGridView1.Size = new System.Drawing.Size(810, 468);
             this.dataGridView1.TabIndex = 0;
             // 
             // tbL_FATURADETAYTableAdapter1
@@ -237,7 +237,7 @@ namespace Ticari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 461);
+            this.ClientSize = new System.Drawing.Size(810, 468);
             this.Controls.Add(this.toolStripContainer1);
             this.Name = "Irsaliye";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
